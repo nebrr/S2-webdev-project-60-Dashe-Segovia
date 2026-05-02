@@ -82,12 +82,14 @@ ul{
  align-items: center;
  gap: 0px;
  overflow-x: auto;
+ margin: 0;
+ padding:0;
 }
 
 .sub-navlink {
   display: block;
-  padding:14px 18px;
-  font-size: 14px;
+  padding:14px 22px;
+  font-size: 15px;
   font-weight: 500;
   color: #ccc;
   white-space: nowrap;
@@ -232,7 +234,7 @@ ul{
 
 .what-image {
   flex: 1;
-  max-width: 300px;
+  min-width: 300px;
 }
 
 .what-image-planet{
@@ -244,6 +246,7 @@ ul{
 
 .what-content {
   flex: 1;
+  min-width: 300px;
 }
 
 .what-title {
