@@ -549,3 +549,4 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
 /* Orbit animation */
 @keyframes orbit {
     to { transform: rotate(360deg); }
+}
