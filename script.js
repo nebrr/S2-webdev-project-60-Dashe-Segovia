@@ -11,3 +11,14 @@ const revealObs = new IntersectionObserver(function(entries) {
 revealEls.forEach(function(el) {
     revealObs.observe(el);
 });
+
+
+var track   = document.getElementById("sliderTrack");
+var prevBtn = document.getElementById("prevBtn");
+var nextBtn = document.getElementById("nextBtn");
+var dotsBox = document.getElementById("dots");
+
+
+if (track && prevBtn && nextBtn && dotsBox) {
+
+    var slides  = document.querySelectorAll(".slide");

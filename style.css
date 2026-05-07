@@ -550,3 +550,186 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
 @keyframes orbit {
     to { transform: rotate(360deg); }
 }
+
+
+.section-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:  60px;
+}
+
+
+.section-title{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+.planets-scroll-section {
+    background-color: #000;
+    padding: 100px 0 80px;
+}
+
+
+.slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.slide-text {
+    flex: 1;
+    max-width: 520px;
+}
+
+.slide-number {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #4da6ff;
+    margin-bottom: 16px;
+}
+
+.slide-name {
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.slide-type {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4da6ff;
+    margin-bottom: 24px;
+}
+
+.slide-desc {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #bbb;
+    margin-bottom: 36px;
+}
+
+
+.slide-stats {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.slide-stats li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.stat-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+.slide-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-image img {
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-18px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Arrow buttons and dots row */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 56px;
+}
+
+
+.arrow-btn {
+    font-family: "Orbitron", sans-serif;
+    background: transparent;
+    border: 1px solid rgba(77, 166, 255, 0.4);
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+    border-color: #4da6ff;
+    color: #4da6ff;
+    box-shadow: 0 0 20px rgba(77, 166, 255, 0.4);
+}
+
+
+.dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #444;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4da6ff;
+    width: 24px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(77, 166, 255, 0.6);
+}
+
