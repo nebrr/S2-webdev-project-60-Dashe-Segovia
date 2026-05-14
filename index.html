@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BigPlaneterium</title>
     <link rel="stylesheet" href="style.css">
-    
+    <!--I Chose Orbitron Font style to get space feeling to my website-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
     </style>
 </head>
 <body>
-    <div id="curser"></div>
-    <div id="curser-ring"></div>
+                                                                         <!--Top NAVIGATION BAR-->
+                                                             <!--This is the top header that stays at the top of the page. -->
+                                                                 <!--This where the website logo and name stays-->
     <header class="top_nav">
         <div class="top_navleft">
             <button class="BigPlaneterium">
@@ -23,16 +24,21 @@
         </div>
 
     </header>
-
+                                                                            <!-- SUB NAVIGATION BAR-->
+                                                        <!--This is the secondary menu. This helps the user to pick what section they want see-->
+                                                        <!--Such as (Home, Our Home, Milky Way and All the Planets)-->
     <nav class="sub-nav">
         <ul class="sub_navlist">
             <li><a href="#overview" class="sub-navlink sub-nav_link-active">Home</a></li>
             <li><a href="earth.html"     class="sub-navlink">Our Home</a> </li>
-            <li><a href="#Solar"     class="sub-navlink">Solar System</a></li>
-            <li><a href="#Way"     class="sub-navlink">The Milky Way</a> </li>
+            <li><a href="milky-way.html"     class="sub-navlink">The Milky Way</a> </li>
             <li><a href="#all" class="sub-navlink">All Planets</a></li>
         </ul>
     </nav>
+
+                                                                    <!-- HERO SECTION-->
+                                             <!--This is the landing page of my website and the very top of the website-->
+                                             <!--this section shows a small overview of the planet that is floating with the help of keyframes-->
     
     <section class="main" id="overview">
         <div class="planets">
@@ -48,6 +54,7 @@
         </div>
         <div class="main_content">
             <h1 class="title">Welcome to BigPlanetarium</h1>
+                 <h4>The Universe is Closer Than You Think</h4>
         </div>
 
     </section>
@@ -55,55 +62,64 @@
 
 </div>
 
-<section class="what-is-planet">
+                                                                        <!-- INFO SLIDER SECTION-->
+                                        <!--This slider shows the main topic of my website (Earth and Milky Way)-->
+                                        <!--It makes it interactive with the help of buttons either swipe or click to the content-->
+ <section class="info-slider-section">
+        <div class="info-track-wrapper">
+            <div class="info-track" id="infoTrack">
 
-   <div class="what-container">
-
-        <div class="what-image">
-            <img src="images/earth.jpg" alt="what is a planet" class="what-image-planet">
-        </div>
-
-        <div class="what-content">
-            <h2 class="what-title"> Our Home </h2>
-            <div class="what-text">
-                <p> 
-                 Earth, our home planet, is a world unlike any other. The third planet from the sun, Earth is the only place in the known universe confirmed to host life.</p>
-                 <p>With a radius of 3,959 miles, Earth is the fifth largest planet in our solar system, and it's the only one known for sure to have liquid water on its surface. Earth is also unique in terms of monikers. Every other solar system planet was named for a Greek or Roman deity, but for at least a thousand years, 
-                    some cultures have described our world using the Germanic word “earth,” which means simply “the ground.” </p>
-                
-                <div class="container-button">
-                    <a href="earth.html">
-                        <button class="button">Learn More</button>
-                    </a>
+                <div class="what-is-planet info-slide">
+                    <div class="what-container">
+                        <div class="what-image">
+                            <img src="images/earth.jpg" alt="what is a planet" class="what-image-planet">
+                        </div>
+                        <div class="what-content">
+                            <h2 class="what-title"> Our Home </h2>
+                            <div class="what-text">
+                                <p>Earth, our home planet, is a world unlike any other. The third planet from the sun, Earth is the only place in the known universe confirmed to host life.</p>
+                                <p>With a radius of 3,959 miles, Earth is the fifth largest planet in our solar system, and it's the only one known for sure to have liquid water on its surface. Earth is also unique in terms of monikers. Every other solar system planet was named for a Greek or Roman deity, but for at least a thousand years, some cultures have described our world using the Germanic word "earth," which means simply "the ground."</p>
+                                <div class="container-button">
+                                    <a href="earth.html">
+                                        <button class="button">Learn More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="what-is-planet info-slide" id="Way">
+                    <div class="what-container">
+                        <div class="what-image">
+                            <img src="images/Milky way.jpg" alt="The Milky Way" class="what-image-planet">
+                        </div>
+                        <div class="what-content">
+                            <h2 class="what-title"> The Milky Way </h2>
+                            <div class="what-text">
+                                <p>The galaxy is the Milky Way Galaxy, a very large spiral galaxy made up of hundreds of billions of stars including the Sun. Named for the band of stars that can be seen in the night sky from Earth. Due to Earth's position inside of the galaxy, astronomers have a hard time studying the entire structure of the galaxy. The radio and infrared telescopes are able to see parts of the universe behind the dust clouds that have been impenetrable to ordinary telescopes.</p>
+                                
+                                <div class="container-button">
+                                    <a href="milky-way.html">
+                                        <button class="button">Learn More</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-   </div>
-</section>
 
-<section id="Solar" class="Solar-section">
-        <h2 class="section-title"> The Solar System</h2>
-        <div class="planet-overview-wrapper">
-            <div class="planet-overview">
-                <div class="sun">
-                    <img src="./images/sun.png" alt="Sun">
-                </div>
-                <div class="mercury"></div>
-                <div class="venus"></div>
-                <div class="earth">
-                    <div class="moon"></div>
-                </div>
-                <div class="mars"></div>
-                <div class="jupiter"></div>
-                <div class="saturn"></div>
-                <div class="uranus"></div>
-                <div class="neptune"></div>
-                <div class="pluto"></div>
-            </div>
+        <div class="info-controls">
+            <button class="info-arrow" id="infoPrev">&#8592;</button>
+            <div class="info-dots" id="infoDots"></div>
+            <button class="info-arrow" id="infoNext">&#8594;</button>
         </div>
     </section>
-
-
+                                                                 <!-- ALL PLANETS SECTION-->
+                <!--This is the main part of my website that makes it very interactive it displays all of the planets of the solar system and their description-->
    <section id="all" class="planets-scroll-section">
         <h2 class="section-title">Explore The Planets</h2>
 
@@ -283,7 +299,11 @@
         </div>
 
     </section>
-    </section>
+
+     <footer>
+        <div class="footer-brand">BigPlanetarium <span>&#9711;</span></div>
+    </footer>
+
   <script src="script.js"></script>
     
 </body>
