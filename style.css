@@ -1,138 +1,115 @@
+/*These styles apply to every element on the page*/
 *::before, *::after {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+    box-sizing: border-box; /* Border-bos include padding and border in the width and height so elements don't become larger than expected when you add padding*/
+    margin:0; /* remove default margin that browsers add to elements */
+    padding:0; /* same as margin */
 }
 
-html{scroll-behavior: smooth;}
+html{scroll-behavior: smooth;} /* Makes the page scrolling smooth such as when clicking a menu link*/
 
+
+/* font style*/
 body {
-    font-family: "Orbitron", sans-serif;
-    background-color: #000000;
-    color: #fff;
-    line-height: 1.6em;
+    font-family: "Orbitron", sans-serif; /* The main font and only font*/
+    background-color: #000000; /* Black Backround for the entire page */
+    color: #fff;  /* White text color to contrast with the black backround*/
+    line-height: 1.6em; /* Line height makes the text readable by increasing the vertical space between lines 1.6em means 1.6 times the font size*/
 }
 
 
 a{
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* This removes the underline from the link*/
+    color: inherit; 
 }
 
 ul{
-    list-style: none;
+    list-style: none; /* This removes the bullet points from lists*/
 }
 
-.cursor {
-  width: 8px; height: 8px;
-  background: #fff;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background 0.3s;
-  
-}
 
-.cursor-ring {
-  width: 36px; height: 36px;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s,;
-}
+/* TOP NAVIGATION SECTION*/
 .top_nav{
-    display: flex;
-  align-items: center;
-  justify-content: space-between;  
-  background-color: #000;
-  padding: 10px 24px;
-  border-bottom: 1px solid #222;
-  position: sticky;   
+    display: flex; /* Flexbox gives flexible arrangement of the items that is in a row*/
+  align-items: center; /* Centers items vertically in the middle of the navbar*/
+  justify-content: space-between; /* Spreads item apart like logo on the left and links on the right*/
+  background-color: #000; /* dark backround to match the page backround*/
+  padding: 10px 24px; /* spacing for the navbar*/
+  border-bottom: 1px solid #222;/* subtle border at the bottom so seperate the navbar from the content*/
+  position: sticky;   /* I used sticky to keep the navbar at the top when scrolling down*/
   top: 0;
-  z-index: 100;
+  z-index: 100;   /* I used z-index to make the navbar to be always on top of other elements. 100 is high enough to stay on top*/
 }
 
+/* Left side of the NAVBAR (Logo and the icon) */
 .top_navleft {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+  display: flex; /* flexbox for horizontal placement for the logo and icon*/
+  align-items: center; /* Vertically center the item*/
+  gap: 14px;/* Space between the logo and icon*/
 }
-
+/* Logo Styling*/
 .BigPlaneterium {
-  background: none;
+  background: none;/* removes the default styling since i made it a button*/
   border: none;
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: "Orbitron", sans-serif;
+  color: #fff; /* White text for the visibility on a black backround*/
+  font-size: 22px;/* font size*/
+  font-weight: bold;/* Makes the text bold*/
+  cursor: pointer; /* changes the cursor to pointer to indicate it is clickible*/
+  display: flex;/* flexbox to align icon and text horizontal*/
+  align-items: center; 
+  gap: 6px; /* space between icon and text*/
+  font-family: "Orbitron", sans-serif; /* font */
 }
 
 .BigPlaneterium:hover {
-  color: #4da6ff;  /* turns blue on hover */
+  color: #4da6ff;    /* turns blue on hover when you hobver on the logo*/
 }
 
+/* logo icon size*/
 .BigP_icon {
   font-size: 20px;
 }
 
-.top_navright {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-link {
-  font-size:  15px;
-  font-weight:500;
-  color:#fff;
-  white-space: nowrap;
-}
-
+/* SUB NAV SECTION*/
 .sub-nav {
- background-color: #111;
- border-bottom: 1px solid #222;
- padding:0 24px;
+ background-color: #111; /* Slightly lighter backround than main navbar*/
+ border-bottom: 1px solid #222;/* Border at bottom to separate from main content*/
+ padding:0 24px;/* spacing around the sub nav items*/
 }
-
+/* Sub nav list container*/
 .sub_navlist {
- display: flex;
- align-items: center;
- gap: 0px;
- overflow-x: auto;
+ display: flex;/* arrange sub-nav items horizontal*/
+ align-items: center;/* center items vertically*/
+ gap: 0px;/* no gap means theres no gap on each content*/
+ /* reset the default margin and padding*/
  margin: 0;
  padding:0;
 }
-
+/* Sub nav link*/
 .sub-navlink {
-  display: block;
+  display: block; 
   padding:14px 22px;
   font-size: 15px;
   font-weight: 500;
   color: #ccc;
   white-space: nowrap;
   border-bottom: 3px solid transparent;
-  transition: color 0.2s, border-bottom-color 0.2s;
+  transition: color 0.2s, border-bottom-color 0.2s; /* The border starts invisible but becomes blue when hover creating a underline effect*/
   margin:0;
 }
 
 .sub-navlink:hover {
   color: #fff;
-  border-bottom-color: #4da6ff;
+  border-bottom-color: #4da6ff; /* Blue underline appears when you hover*/
 }
 .sub-nav_link-active {
   color: #fff;
   border-bottom-color: #4da6ff;
 }
 
+
+/* Landing page section*/
+
+/*this is the landing page of the website its a full screen with planets floating (using keyframes) in the backround*/ 
 .main {
   position: relative;
   min-height: 100vh;
@@ -152,9 +129,11 @@ ul{
 
 }
 
+/* PLANET POSITIONING*/
+/* Positioning of all the planets, each planets has different sizing and and is placed in different spot to fill the space nicely*/
 .planet{
   position:absolute;
-  border-radius: 50%;
+  border-radius: 50%; /* This makes it round so it wont be squared since i used photos*/
   object-fit: cover;
 }
 
@@ -220,7 +199,9 @@ ul{
   right: 10%;
   opacity: 0.75;
 }
-
+/* Main Content On hero*/
+/* Primary content container layered above the background planets. Z-index ensures the text and interactive elements 
+remain visible to users*/
 .main_content {
   position: relative;  
   z-index: 10;
@@ -243,6 +224,8 @@ ul{
   margin: 20px
 }
 
+
+/* WHAT IS A PLANET SECTION */
 .what-is-planet {
  background-color: #000;
  padding:100px 60px;
@@ -255,7 +238,6 @@ ul{
   gap: 80px;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
 }
 
 .what-image {
@@ -296,187 +278,8 @@ ul{
   color: #4da6ff;
 }
 
-
-.Solar-section {
-    background-color: #000;
-    padding: 100px 20px 160px;   /* More bottom padding */
-    text-align: center;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.section-title {
-    font-size: clamp(42px, 6vw, 62px);
-    font-weight: 900;
-    margin-bottom: 180px;   /* Increased from 100px */
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-
-.planet-overview-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.planet-overview {
-    font-size: 5.5px;            /* Slightly smaller */
-    width: 38em;
-    height: 38em;
-    margin: 0 auto;
-    position: relative;
-    border: 2px solid rgba(255,255,255,0.15);
-    border-radius: 50%;
-    box-shadow: 0 0 80px rgba(255, 180, 80, 0.3);
-}
-
-/* Planet styles from your original file */
-.sun {
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 15em;
-    left: 15em;
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-    box-shadow: 0 0 3em rgb(255, 128, 0);
-    animation: orbit 50s linear infinite;
-    z-index: 1;
-}
-
-.mercury, .venus, .earth, .moon, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto {
-    position: absolute;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-    border-width: 0.1em 0.1em 0 0;
-    border-radius: 50%;
-}
-
-.mercury { top: 12.5em; left: 12.5em; width: 15em; height: 15em; animation: orbit 68.7s linear infinite; }
-.venus   { top: 10em; left: 10em; width: 20em; height: 20em; animation: orbit 48.7s linear infinite; }
-.earth   { top: 6em; left: 6em; width: 28em; height: 28em; animation: orbit 36.5s linear infinite; }
-.moon    { top: 2em; right: -1em; width: 7em; height: 7em; animation: orbit 2.7s linear infinite; }
-.mars    { top: 2em; left: 2.5em; width: 36em; height: 36em; animation: orbit 26.5s linear infinite; }
-.jupiter { top: -2em; left: -2em; width: 45em; height: 45em; animation: orbit 21s linear infinite; }
-.saturn  { top: -7em; left: -7em; width: 55em; height: 55em; animation: orbit 17s linear infinite; }
-.uranus  { top: -12em; left: -12em; width: 65em; height: 65em; animation: orbit 19s linear infinite; }
-.neptune { top: -17em; left: -17em; width: 75em; height: 75em; animation: orbit 15s linear infinite; }
-.pluto   { top: -22em; left: -22em; width: 85em; height: 85em; animation: orbit 18s linear infinite; }
-
-.sun img, .planet-overview img {
-    height: 130%;
-    width: 130%;
-}
-
-.mercury::before,
-.venus::before,
-.earth::before,
-.moon::before,
-.mars::before,
-.jupiter::before,
-.saturn::before,
-.uranus::before,
-.neptune::before,
-.pluto::before{
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    animation: orbit 30s linear infinite;
-}
-
-
-.mercury::before {
-    top: 1.5em;
-    right: 0.8em;
-    width: 2em;
-    height: 2em;
-    background-image: url('./images/mercury.jpg');
-    background-size: cover;
-}
-.venus::before {
-    top: 2em;
-    right: 2em;
-    width: 2em;
-    height: 2em;
-    background-image: url('./images/venus.jpg');
-    background-size: cover;
-}
-.earth::before {
-    top: 3em;
-    right: 0em;
-    width: 5em;
-    height: 5em;
-    background-image: url('./images/earth.jpg');
-    background-size: cover;
-}
-
-.moon::before {
-    top: 0.8em;
-    right: 0.2em;
-    width: 1.2em;
-    height: 1.2em;
-    background-image: url('./images/moon.png');
-    background-size: cover;
-}
-.mars::before {
-    top: 5em;
-    right: 3em;
-    width: 3em;
-    height: 3em;
-    background-image: url('./images/mars.jpg');
-    background-size: cover;
-}
-.jupiter::before {
-    top: 6em;
-    right: 3em;
-    width: 5em;
-    height: 5em;
-    background-image: url('./images/jupiter.jpg');
-    background-size: cover;
-}
-.saturn::before {
-    top: 7.5em;
-    right: 5em;
-    width: 4.5em;
-    height: 4.5em;
-    background-image: url('./images/saturn.png');
-    background-size: cover;
-}
-.uranus::before {
-    top: 9em;
-    right: 6.5em;
-    width: 4em;
-    height: 4em;
-    background-image: url('./images/uranus.jpg');
-    background-size: cover;
-}
-.neptune::before {
-    top: 10em;
-    right: 8em;
-    width: 4em;
-    height: 4em;
-    background-image: url('./images/neptune.jpg');
-    background-size: cover;
-}
-.pluto::before {
-    top: 11em;
-    right: 10em;
-    width: 4em;
-    height: 4em;
-    background-image: url('./images/pluto.jpg');
-    background-size: cover;
-}
-
-.star {
-    position: absolute;
-    background-color: white;
-    border-radius: 50%;
-    z-index: -1;
-}
-
+/* BUTTON STYLE*/
+/* The main button on the page. It has a blue border and glows when you hover over it there's also a shine effect that slides across when you hover*/
 .button {
   font-family: "Orbitron", sans-serif;
   font-size: 1.2rem;
@@ -505,7 +308,7 @@ ul{
   padding: 12px 32px;
   background-color: transparent;
   color: #fff;
-  border: 2px solid #4da6ff; /* Matches your theme blue */
+  border: 2px solid #4da6ff; 
   border-radius: 4px;
   cursor: pointer;
   position: relative;
@@ -530,28 +333,23 @@ z-index: -1;
 
 .button:hover {
 color: #fff;
-box-shadow: 0 0 25px rgba(77, 166, 255, 0.6);
-transform: translateY(-2px);
+box-shadow: 0 0 25px rgba(77, 166, 255, 0.6); /* Glow gets brigher*/
+transform: translateY(-2px); /* Button moves up slightly*/
 text-shadow: 0 0 8px #fff;
 }
 
 .button:hover::before {
-left: 100%;
+left: 100%; /* The shine sides across the button*/
 }
 
 .button:active {
-transform: translateY(1px);
+transform: translateY(1px); /* Button moves down when clicked*/
 box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
 }
 
 
 
-/* Orbit animation */
-@keyframes orbit {
-    to { transform: rotate(360deg); }
-}
-
-
+/* A section with a slider showing different planets. you can click arrows to see the next planet */
 .section-title{
   display: flex;
   justify-content: center;
@@ -572,7 +370,8 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     padding: 100px 0 80px;
 }
 
-
+/* Slider wrapper*/
+/* This is like a window that shows only one slide at a time. The slides hide outside this area*/
 .slider-wrapper {
     overflow: hidden;
     width: 100%;
@@ -580,11 +379,11 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
 
 .slider-track {
     display: flex;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s ease; /* Smoothen the slides when going to the next planet*/
 }
 
 .slide {
-    min-width: 100%;
+    min-width: 100%; /* Each slide takes up the full width*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -593,6 +392,8 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     box-sizing: border-box;
 }
 
+/* Slide Content*/
+/* The text on the left side of each slide with planet name, type and description*/
 .slide-text {
     flex: 1;
     max-width: 520px;
@@ -629,7 +430,8 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     margin-bottom: 36px;
 }
 
-
+/* Slide Statistics*/
+/* Shows facts about the planet like diameter, distance from sun and so on*/
 .slide-stats {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 24px;
@@ -656,7 +458,8 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     color: #fff;
 }
 
-
+/* Slide Image*/
+/* The planet image on the right side of each slide. It gently floats up and down */
 .slide-image {
     flex: 1;
     display: flex;
@@ -670,7 +473,7 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
-    animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite; /* Gives the image a subtle Float*/
 }
 
 @keyframes float {
@@ -678,7 +481,7 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     50%  { transform: translateY(-18px); }
     100% { transform: translateY(0px); }
 }
-
+/* Slide Controls*/
 /* Arrow buttons and dots row */
 .slider-controls {
     display: flex;
@@ -708,7 +511,8 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     box-shadow: 0 0 20px rgba(77, 166, 255, 0.4);
 }
 
-
+/* Dot indication*/
+/* the small dots below the slide. This acts as a indicator of which content you are in of the slider */
 .dots {
     display: flex;
     gap: 10px;
@@ -731,5 +535,192 @@ box-shadow: 0 0 10px rgba(77, 166, 255, 0.4);
     width: 24px;
     border-radius: 3px;
     box-shadow: 0 0 10px rgba(77, 166, 255, 0.6);
+}
+
+/* INFO SLIDER SECTION*/
+  /* Another slider section, similar to the previous one*/
+.info-slider-section {
+    background-color: #000;
+    position: relative;
+}
+
+.info-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.info-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.info-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/*Slider Arrows*/
+/* Left and right arrow buttons on the side of the sldier*/
+#infoPrev {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-family: "Orbitron", sans-serif;
+    background: transparent;
+    border: 1px solid rgba(77, 166, 255, 0.4);
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+#infoNext {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-family: "Orbitron", sans-serif;
+    background: transparent;
+    border: 1px solid rgba(77, 166, 255, 0.4);
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#infoPrev:hover,
+#infoNext:hover {
+    border-color: #4da6ff;
+    color: #4da6ff;
+    box-shadow: 0 0 20px rgba(77, 166, 255, 0.4);
+}
+
+/* info dots of the slider*/
+/* dots below the info slider showing which slide you are on*/
+.info-controls {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 40px;
+}
+
+.info-dots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.info-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #444;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.info-dot.active {
+    background: #4da6ff;
+    width: 24px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(77, 166, 255, 0.6);
+}
+/* Footer section*/
+/* The bottom section of the page with the name of my website */
+footer {
+    border-top: 1px solid #222;
+    padding: 32px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+/* Planet Floating animations*/
+/* All the planets has a subtle float up and down in the backround
+each planet has a different timing so they don't all move at the same time*/
+
+.planet-mercury { animation: float 7s ease-in-out infinite; animation-delay: 0s; }
+.planet-venus   { animation: float 9s ease-in-out infinite; animation-delay: 1s; }
+.planet-earth   { animation: float 8s ease-in-out infinite; animation-delay: 2s; }
+.planet-jupiter { animation: float 10s ease-in-out infinite; animation-delay: 0.5s; }
+.planet-saturn  { animation: float 11s ease-in-out infinite; animation-delay: 1.5s; }
+.planet-uranus  { animation: float 8s ease-in-out infinite; animation-delay: 3s; }
+.planet-neptune { animation: float 9s ease-in-out infinite; animation-delay: 2.5s; }
+.planet-pluto   { animation: float 7s ease-in-out infinite; animation-delay: 4s; }
+
+
+.planet-saturn {
+  animation: floatSaturn 11s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatSaturn {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+
+.planet-venus {
+  animation: floatVenus 9s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes floatVenus {
+  0%   { transform: translateX(-50%) translateY(0px); }
+  50%  { transform: translateX(-50%) translateY(-18px); }
+  100% { transform: translateX(-50%) translateY(0px); }
+}
+
+.planet-jupiter {
+  animation: floatJupiter 10s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes floatJupiter {
+  0%   { transform: translate(-20%, -55%) translateY(0px); }
+  50%  { transform: translate(-20%, -55%) translateY(-18px); }
+  100% { transform: translate(-20%, -55%) translateY(0px); }
 }
 
