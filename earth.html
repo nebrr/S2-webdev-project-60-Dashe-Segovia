@@ -11,33 +11,34 @@
 </head>
 
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-ring"></div>
-
+<!--Top Navigation Bar -->
     <header class="top_nav">
         <div class="top_navleft">
+            <!--logo Section-->
             <button class="BigPlaneterium">
                 BigPlanetarium
                 <span class="bigP_icon">&#9711;</span>
             </button>
         </div>
     </header>
-
+<!--Sub Navigation (This include the links to different pages of the website)-->
     <nav class="sub-nav">
         <ul class="sub_navlist">
             <li><a href="index.html" class="sub-navlink">Home</a></li>
             <li><a href=""         class="sub-navlink sub-nav_link-active">Our Home</a></li>
-            <li><a href="#"         class="sub-navlink">Solar System</a></li>
-            <li><a href="#"         class="sub-navlink">The Milky Way</a></li>
-            <li><a href="#"         class="sub-navlink">All Planets</a></li>
+            <li><a href="milky-way.html"     class="sub-navlink">The Milky Way</a></li>
+            <li><a href="index.html"         class="sub-navlink">All Planets</a></li>
         </ul>
     </nav>
-
+<!--hero section -->
     <section class="hero">
+        <!--Video That plays automatically loops and has no sound-->
         <video autoplay loop muted playsinline class="hero-bg">
             <source src="video/Earth.mp4" type="video/mp4">
         </video>
+        <!-- Added a dark overlay on top of the video the make the text readable-->
         <div class="hero-vignette"></div>
+        <!--Text content of the top of the video-->
         <div class="hero-content">
             <p class="hero-eyebrow">Third planet from the sun</p>
             <h1 class="hero-title">Earth</h1>
@@ -45,7 +46,9 @@
         </div>
     </section>
 
+    <!-- Stats Section (This shows the Important Statistics of the topic)-->
     <div class="stats-strip reveal">
+        <!--Each stat shows a number and a label-->
         <div class="sstat">
             <div class="sstat-val">4.5<sup>BYR</sup></div>
             <div class="sstat-lbl">Age of Earth</div>
@@ -63,12 +66,14 @@
             <div class="sstat-lbl">Circumference</div>
         </div>
     </div>
-
+<!--First section of the website - image on the left and text on the right (recycled my idea from the landing page) -->
     <section class="feature-section reveal">
         <div class="feature-container">
             <div class="feature-image">
+                <!--Earth image-->
                 <img src="images/earth.jpg" alt="Earth from space">
             </div>
+            <!--Information about Earth-->
             <div class="feature-content">
                 <p class="feature-tag">01 — Our Home</p>
                 <h2 class="feature-title">Our Home Planet</h2>
@@ -80,20 +85,22 @@
             </div>
         </div>
     </section>
-
+<!--Full Width Image Section - A image that covers the whole section-->
     <div class="fullbleed reveal">
         <img src="images/earth.jpg" alt="The Blue Marble">
         <div class="fullbleed-caption">
+            <!--Text overlay on the image-->
             <h2>The Blue<br>Marble</h2>
             <p>As seen from 28,000 km above the surface</p>
         </div>
     </div>
-
+<!-- Second feature section - Image on right, text on the left (flipped it)-->
     <section class="feature-section reveal">
         <div class="feature-container reverse">
             <div class="feature-image">
                 <img src="images/earth.jpg" alt="Earth atmosphere">
             </div>
+            <!--More information about Earth-->
             <div class="feature-content">
                 <p class="feature-tag">02 — Atmosphere</p>
                 <h2 class="feature-title">A Shield Around Our World</h2>
@@ -104,38 +111,46 @@
             </div>
         </div>
     </section>
-
+<!--Why our planet must be protected section -->
     <section class="protect-section reveal" id="protect">
+        <!-- Header-->
         <div class="protect-header">
             <h2>Why Earth Must<br>Be Protected</h2>
             <p>Six forces shaping the future of the only home we have ever known.</p>
         </div>
+        <!--Grid layout with 6 cards-->
         <div class="cards-grid">
+            <!-- Card 1-->
             <div class="card">
                 <div class="card-num">01</div>
                 <div class="card-title">Climate Change</div>
                 <p class="card-body">Rising CO₂ is shifting temperature bands, disrupting rainfall patterns, and accelerating ice melt at both poles on timescales of centuries.</p>
             </div>
+            <!--2nd Card-->
             <div class="card">
                 <div class="card-num">02</div>
                 <div class="card-title">Biodiversity</div>
                 <p class="card-body">The current rate of species extinction is estimated at 100 to 1,000 times the natural background rate. Every species lost is a thread pulled from the web that makes agriculture, clean water, and breathable air possible.</p>
             </div>
+            <!-- 3rd Card-->
             <div class="card">
                 <div class="card-num">03</div>
                 <div class="card-title">The Oceans</div>
                 <p class="card-body">Oceans absorb about 30% of the CO₂ humans produce. Acidification is already dissolving the shells of marine organisms at the base of the food chain, threatening ecosystems that feed over three billion people.</p>
             </div>
+            <!--4th Card-->
             <div class="card">
                 <div class="card-num">04</div>
                 <div class="card-title">Fresh Water</div>
                 <p class="card-body">Only 2.5% of Earth's water is fresh, and most of that is locked in glaciers. Aquifers supplying drinking water to billions are being drawn down faster than rainfall can replenish them.</p>
             </div>
+            <!--5th Card-->
             <div class="card">
                 <div class="card-num">05</div>
                 <div class="card-title">The Atmosphere</div>
                 <p class="card-body">The ozone layer filters ultraviolet radiation that would otherwise make surface life impossible. Maintaining atmospheric chemistry is not optional — it is the precondition for everything else on this planet.</p>
             </div>
+            <!--6th Card-->
             <div class="card">
                 <div class="card-num">06</div>
                 <div class="card-title">Geological Time</div>
@@ -143,7 +158,7 @@
             </div>
         </div>
     </section>
-
+        <!--Closng Section With a image and qoute-->
     <div class="closing">
         <img src="images/earth.jpg" alt="Earth">
         <div class="closing-content reveal">
@@ -151,7 +166,7 @@
             <p>One Earth <br>No Backup</p>
         </div>
     </div>
-
+<!-- footer-->
     <footer>
         <div class="footer-brand">BigPlanetarium <span>&#9711;</span></div>
     </footer>
