@@ -1,6 +1,8 @@
+
+/*I used css reset for the first line*/
 /*These styles apply to every element on the page*/
 *::before, *::after {
-    box-sizing: border-box; /* Border-bos include padding and border in the width and height so elements don't become larger than expected when you add padding*/
+    box-sizing: border-box; /* Border-box include padding and border in the width and height so elements don't become larger than expected when you add padding*/
     margin:0; /* remove default margin that browsers add to elements */
     padding:0; /* same as margin */
 }
@@ -199,7 +201,62 @@ ul{
   right: 10%;
   opacity: 0.75;
 }
-/* Main Content On hero*/
+
+/* Planet Floating animations*/
+/* All the planets has a subtle float up and down in the backround
+each planet has a different timing so they don't all move at the same time*/
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+.planet-mercury { animation: float 7s ease-in-out infinite; animation-delay: 0s; }
+.planet-venus   { animation: float 9s ease-in-out infinite; animation-delay: 1s; }
+.planet-earth   { animation: float 8s ease-in-out infinite; animation-delay: 2s; }
+.planet-jupiter { animation: float 10s ease-in-out infinite; animation-delay: 0.5s; }
+.planet-saturn  { animation: float 11s ease-in-out infinite; animation-delay: 1.5s; }
+.planet-uranus  { animation: float 8s ease-in-out infinite; animation-delay: 3s; }
+.planet-neptune { animation: float 9s ease-in-out infinite; animation-delay: 2.5s; }
+.planet-pluto   { animation: float 7s ease-in-out infinite; animation-delay: 4s; }
+
+
+.planet-saturn {
+  animation: floatSaturn 11s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatSaturn {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+
+.planet-venus {
+  animation: floatVenus 9s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes floatVenus {
+  0%   { transform: translateX(-50%) translateY(0px); }
+  50%  { transform: translateX(-50%) translateY(-18px); }
+  100% { transform: translateX(-50%) translateY(0px); }
+}
+
+.planet-jupiter {
+  animation: floatJupiter 10s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes floatJupiter {
+  0%   { transform: translate(-20%, -55%) translateY(0px); }
+  50%  { transform: translate(-20%, -55%) translateY(-18px); }
+  100% { transform: translate(-20%, -55%) translateY(0px); }
+}
+
+
+/* The options*/
 /* Primary content container layered above the background planets. Z-index ensures the text and interactive elements 
 remain visible to users*/
 .main_content {
@@ -656,71 +713,5 @@ footer {
 
 
 
-.reveal {
-    opacity: 0;
-    transform: translateY(36px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
-}
 
-.reveal.visible {
-    opacity: 1;
-    transform: none;
-}
-
-
-@keyframes float {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-18px); }
-  100% { transform: translateY(0px); }
-}
-
-
-
-/* Planet Floating animations*/
-/* All the planets has a subtle float up and down in the backround
-each planet has a different timing so they don't all move at the same time*/
-
-.planet-mercury { animation: float 7s ease-in-out infinite; animation-delay: 0s; }
-.planet-venus   { animation: float 9s ease-in-out infinite; animation-delay: 1s; }
-.planet-earth   { animation: float 8s ease-in-out infinite; animation-delay: 2s; }
-.planet-jupiter { animation: float 10s ease-in-out infinite; animation-delay: 0.5s; }
-.planet-saturn  { animation: float 11s ease-in-out infinite; animation-delay: 1.5s; }
-.planet-uranus  { animation: float 8s ease-in-out infinite; animation-delay: 3s; }
-.planet-neptune { animation: float 9s ease-in-out infinite; animation-delay: 2.5s; }
-.planet-pluto   { animation: float 7s ease-in-out infinite; animation-delay: 4s; }
-
-
-.planet-saturn {
-  animation: floatSaturn 11s ease-in-out infinite;
-  animation-delay: 1.5s;
-}
-
-@keyframes floatSaturn {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-18px); }
-  100% { transform: translateY(0px); }
-}
-
-
-.planet-venus {
-  animation: floatVenus 9s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-@keyframes floatVenus {
-  0%   { transform: translateX(-50%) translateY(0px); }
-  50%  { transform: translateX(-50%) translateY(-18px); }
-  100% { transform: translateX(-50%) translateY(0px); }
-}
-
-.planet-jupiter {
-  animation: floatJupiter 10s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
-@keyframes floatJupiter {
-  0%   { transform: translate(-20%, -55%) translateY(0px); }
-  50%  { transform: translate(-20%, -55%) translateY(-18px); }
-  100% { transform: translate(-20%, -55%) translateY(0px); }
-}
 

@@ -11,9 +11,9 @@
     </style>
 </head>
 <body>
-                                                                         <!--Top NAVIGATION BAR-->
-                                                             <!--This is the top header that stays at the top of the page. -->
-                                                                 <!--This where the website logo and name stays-->
+<!--Top NAVIGATION BAR-->
+<!--This is the top header that stays at the top of the page. -->
+ <!--This where the website logo and name stays-->
     <header class="top_nav">
         <div class="top_navleft">
             <button class="BigPlaneterium">
@@ -24,9 +24,9 @@
         </div>
 
     </header>
-                                                                            <!-- SUB NAVIGATION BAR-->
-                                                        <!--This is the secondary menu. This helps the user to pick what section they want see-->
-                                                        <!--Such as (Home, Our Home, Milky Way and All the Planets)-->
+            <!-- SUB NAVIGATION BAR-->
+<!--This is the secondary menu. This helps the user to pick what section they want see-->
+<!--Such as (Home, Our Home, Milky Way and All the Planets)-->
     <nav class="sub-nav">
         <ul class="sub_navlist">
             <li><a href="#overview" class="sub-navlink sub-nav_link-active">Home</a></li>
@@ -36,9 +36,9 @@
         </ul>
     </nav>
 
-                                                                    <!-- HERO SECTION-->
-                                             <!--This is the landing page of my website and the very top of the website-->
-                                             <!--this section shows a small overview of the planet that is floating with the help of keyframes-->
+         <!-- HERO SECTION-->
+<!--This is the landing page of my website and the very top of the website-->
+<!--this section shows a small overview of the planet that is floating with the help of keyframes-->
     
     <section class="main" id="overview">
         <div class="planets">
@@ -62,23 +62,26 @@
 
 </div>
 
-                                                                        <!-- INFO SLIDER SECTION-->
-                                        <!--This slider shows the main topic of my website (Earth and Milky Way)-->
-                                        <!--It makes it interactive with the help of buttons either swipe or click to the content-->
+                 <!-- INFO SLIDER SECTION-->
+ <!--This slider shows the main topic of my website (Earth and Milky Way)-->
+  <!--It makes it interactive with the help of buttons either swipe or click to the content-->
  <section class="info-slider-section">
         <div class="info-track-wrapper">
+            <!--Container that slides left/right to show different content-->
             <div class="info-track" id="infoTrack">
-
+                <!-- 1st slide Earth Information-->
                 <div class="what-is-planet info-slide">
                     <div class="what-container">
                         <div class="what-image">
                             <img src="images/earth.jpg" alt="what is a planet" class="what-image-planet">
                         </div>
+                        <!--Earth Description-->
                         <div class="what-content">
                             <h2 class="what-title"> Our Home </h2>
                             <div class="what-text">
                                 <p>Earth, our home planet, is a world unlike any other. The third planet from the sun, Earth is the only place in the known universe confirmed to host life.</p>
                                 <p>With a radius of 3,959 miles, Earth is the fifth largest planet in our solar system, and it's the only one known for sure to have liquid water on its surface. Earth is also unique in terms of monikers. Every other solar system planet was named for a Greek or Roman deity, but for at least a thousand years, some cultures have described our world using the Germanic word "earth," which means simply "the ground."</p>
+                                <!--Button to go to Earth's page-->
                                 <div class="container-button">
                                     <a href="earth.html">
                                         <button class="button">Learn More</button>
@@ -88,17 +91,18 @@
                         </div>
                     </div>
                 </div>
-
+                <!--2nd slide Milky Way Information-->
                 <div class="what-is-planet info-slide" id="Way">
                     <div class="what-container">
                         <div class="what-image">
                             <img src="images/Milky way.jpg" alt="The Milky Way" class="what-image-planet">
                         </div>
+                        <!--Milky Way Description-->
                         <div class="what-content">
                             <h2 class="what-title"> The Milky Way </h2>
                             <div class="what-text">
                                 <p>The galaxy is the Milky Way Galaxy, a very large spiral galaxy made up of hundreds of billions of stars including the Sun. Named for the band of stars that can be seen in the night sky from Earth. Due to Earth's position inside of the galaxy, astronomers have a hard time studying the entire structure of the galaxy. The radio and infrared telescopes are able to see parts of the universe behind the dust clouds that have been impenetrable to ordinary telescopes.</p>
-                                
+                                <!--Button to go to The Milky Way's page-->
                                 <div class="container-button">
                                     <a href="milky-way.html">
                                         <button class="button">Learn More</button>
@@ -111,22 +115,22 @@
 
             </div>
         </div>
-
+<!-- Controls for the slider left and right arrow and the dots-->
         <div class="info-controls">
             <button class="info-arrow" id="infoPrev">&#8592;</button>
             <div class="info-dots" id="infoDots"></div>
             <button class="info-arrow" id="infoNext">&#8594;</button>
         </div>
     </section>
-                                                                 <!-- ALL PLANETS SECTION-->
-                <!--This is the main part of my website that makes it very interactive it displays all of the planets of the solar system and their description-->
+               <!-- ALL PLANETS SECTION-->
+ <!--This is the main part of my website that makes it very interactive it displays all of the planets of the solar system and their description-->
    <section id="all" class="planets-scroll-section">
         <h2 class="section-title">Explore The Planets</h2>
 
-        <div class="slider-wrapper">
-            <div class="slider-track" id="sliderTrack">
+        <div class="slider-wrapper"> 
+            <div class="slider-track" id="sliderTrack"> <!--Container that slides left and right to show different planets-->
 
-                
+                <!--1st planet Mercury-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">01</span>
@@ -144,7 +148,7 @@
                     </div>
                 </div>
 
-              
+              <!--2nd planet Venus-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">02</span>
@@ -162,7 +166,7 @@
                     </div>
                 </div>
 
-               
+               <!--3rd planet Earth-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">03</span>
@@ -180,7 +184,7 @@
                     </div>
                 </div>
 
-                
+                <!--4th planet Mars-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">04</span>
@@ -198,7 +202,7 @@
                     </div>
                 </div>
 
-                
+                <!--5th planet Jupiter-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">05</span>
@@ -216,7 +220,7 @@
                     </div>
                 </div>
 
-                
+                <!--6th planet Saturn-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">06</span>
@@ -234,7 +238,7 @@
                     </div>
                 </div>
 
-                
+                <!--7th planet Uranus-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">07</span>
@@ -252,7 +256,7 @@
                     </div>
                 </div>
 
-                
+                <!--8th planet Neptune-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">08</span>
@@ -270,7 +274,7 @@
                     </div>
                 </div>
 
-                
+                <!--9th planet Pluto-->
                 <div class="slide">
                     <div class="slide-text">
                         <span class="slide-number">09</span>
@@ -291,15 +295,15 @@
             </div>
           
         </div>
-        
+        <!-- Controls for the slider left and right arrow-->
         <div class="slider-controls">
-            <button class="arrow-btn" id="prevBtn">&#8592;</button>
-            <div class="dots" id="dots"></div>
-            <button class="arrow-btn" id="nextBtn">&#8594;</button>
+            <button class="arrow-btn" id="prevBtn">&#8592;</button><!--Left arrow-->
+            <div class="dots" id="dots"></div><!--Dots appear here (created by JavaScript)-->
+            <button class="arrow-btn" id="nextBtn">&#8594;</button> <!--Right Arrow-->
         </div>
 
     </section>
-
+<!--Footer-->
      <footer>
         <div class="footer-brand">BigPlanetarium <span>&#9711;</span></div>
     </footer>

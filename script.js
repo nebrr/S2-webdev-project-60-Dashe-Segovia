@@ -25,7 +25,7 @@ revealEls.forEach(function(el) {
     revealObs.observe(el);
 });
 
-/* Info Slider (first Slider*) */
+/* Info Slider (first Slider) */
 /* This carousal has arrow buttons on the sides instead of dots at bottom.*/
 
 /* get the elements for this slider*/
@@ -48,7 +48,7 @@ if (infoTrack && infoPrev && infoNext && infoDotsBox) {
         infoDotsBox.appendChild(infoDot); /* add it to the page*/
     }
 
-  /* Function to switch to a specific slide*/
+  /* Function to switch to a specific slide*/  /* Go to info*/
     function goToInfo(number) {
         /* If slide number is too high, wrap around to the beginning*/
         if (number >= infoTotal) { number = 0; }
@@ -69,16 +69,7 @@ if (infoTrack && infoPrev && infoNext && infoDotsBox) {
         allInfoDots[infoCurrent].classList.add("active");
     }
 
-    /* makes it clickable*/
-    var allInfoDots = document.querySelectorAll(".info-dot");
-    for (var i = 0; i < allInfoDots.length; i++) {
-        allInfoDots[i].addEventListener("click", function() {
-            /* Find which dot was clicked*/
-            var clickedIndex = Array.from(allInfoDots).indexOf(this);
-            /* Go to that slide*/
-            goToInfo(clickedIndex);
-        });
-    }
+
 
     /* Make arrow buttons work*/
     infoNext.addEventListener("click", function() { goToInfo(infoCurrent + 1); });
@@ -131,17 +122,6 @@ if (track && prevBtn && nextBtn && dotsBox) {
         }
         /* add blue highlight to the current slide's dot*/
         allDots[current].classList.add("active");
-    }
-
-   /* Make the dots clickable*/
-    var allDots = document.querySelectorAll(".dot");
-    for (var i = 0; i < allDots.length; i++) {
-        allDots[i].addEventListener("click", function() {
-            /* Find which dot was clicked*/
-            var clickedIndex = Array.from(allDots).indexOf(this);
-            /* Go to that slide*/
-            goToSlide(clickedIndex);
-        });
     }
     /* Make arrow buttons work */
     nextBtn.addEventListener("click", function() { goToSlide(current + 1); });/* next slide*/
